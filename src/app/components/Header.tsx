@@ -1,54 +1,28 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Typewriter from "./Typewriter";
+import { Typewriter } from "react-simple-typewriter";
 
 const phrases = [
-  "Hi, I'm Gavin",
-  "I'm a bodybuilder",
-  "I'm a software engineer",
-  "I'm in love with low level programming",
+  "Hi, I'm Gavin!",
+  "I'm a bodybuilder.",
+  "I'm a software engineer.",
+  "I'm in love with low level programming.",
 ];
 
 export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center text-center h-screen bg-gray-100">
       <div className="overflow-hidden w-full">
-        {/* <motion.div
-          className="flex gap-4"
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{
-            x: "100%",
-            opacity: 1,
-            transition: { duration: 10, repeat: Infinity, ease: "linear" },
-          }}
-        >
-          {phrases.map((phrase, index) => (
-            <motion.p
-              key={index}
-              className="text-5xl font-bold mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 5 }}
-            >
-              {phrase}
-            </motion.p>
-          ))}
-        </motion.div> */}
-        <motion.h1
-          className="text-5xl font-bold mb-4"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            transition: {
-              duration: 1,
-            },
-          }}
-        >
-          Hi, I'm Gavin
-        </motion.h1>
+        <h1 className="text-5xl font-bold mb-4">
+          <Typewriter
+            words={phrases}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            cursorBlinking={true}
+          />
+        </h1>
       </div>
       <p className="text-xl mb-6">
         An aspiring software engineer passionate about building impactful
