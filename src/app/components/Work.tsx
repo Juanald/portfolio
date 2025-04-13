@@ -1,13 +1,32 @@
+import ProjectCard from "./ProjectCard";
+const projects = [
+  {
+    imgSrc: "/obama.jpg",
+    title: "Project One",
+    description: "This is an awesome project that does something cool.",
+    tags: ["React", "Node.js", "MongoDB"],
+  },
+  {
+    imgSrc: "/trump.jpg",
+    title: "Project Two",
+    description: "This project is about building something even cooler.",
+    tags: ["Next.js", "GraphQL", "Apollo"],
+  },
+  // Add more projects as needed
+];
+
 export default function Work() {
   return (
-    <section className="p-10 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-semibold mb-4">Projects</h2>
-      <ul className="list-disc pl-6">
-        <li>16-bit ALU using Logisim</li>
-        <li>GVN Shell – Fully functional UNIX shell in C</li>
-        <li>Excel Engine – Formula parsing engine in C++</li>
-        <li>Cybersecurity – Buffer overflow exploitation toolkit</li>
-      </ul>
-    </section>
+    <div className="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          imgSrc={project.imgSrc}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+        />
+      ))}
+    </div>
   );
 }

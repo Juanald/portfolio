@@ -13,8 +13,8 @@ const phrases = [
 export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center text-center h-screen bg-gray-100">
-      {/* <div className="overflow-hidden w-full">
-        <motion.div
+      <div className="overflow-hidden w-full">
+        {/* <motion.div
           className="flex gap-4"
           initial={{ x: "-100%", opacity: 0 }}
           animate={{
@@ -30,19 +30,26 @@ export default function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 5 }}
             >
               {phrase}
             </motion.p>
           ))}
-        </motion.div>
-      </div> */}
-      <h1 className="text-5xl font-bold mb-4">
-        <Typewriter text="Hi, I'm Gavin" />
-      </h1>
-      <p className="text-xl mb-6">
-        <Typewriter text="An aspiring software engineer passionate about building impactful technology." />
-      </p>
+        </motion.div> */}
+        <motion.h1
+          className="text-5xl font-bold mb-4"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          Hi, I'm Gavin
+        </motion.h1>
+      </div>
       <p className="text-xl mb-6">
         An aspiring software engineer passionate about building impactful
         technology.

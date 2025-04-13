@@ -11,9 +11,9 @@ export default function Home() {
       <Navbar />
       <Header />
 
-      <section id="about">
+      <div id="about">
         <About />
-      </section>
+      </div>
 
       <section id="work">
         <Work />
