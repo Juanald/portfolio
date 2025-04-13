@@ -6,6 +6,7 @@ type ProjectProps = {
   title: string;
   description: string;
   tags: string[];
+  gitHubLink: string;
 };
 
 export default function ProjectCard({
@@ -13,9 +14,25 @@ export default function ProjectCard({
   title,
   description,
   tags,
+  gitHubLink,
 }: ProjectProps) {
   return (
     <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white transform transition duration-300 ease-in-out hover:scale-105">
+      <a
+        href={gitHubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-2 right-2 z-10"
+      >
+        <Image
+          src="/icons8-github.svg"
+          alt="GitHub"
+          width={24}
+          height={24}
+          className="hover:opacity-80"
+        />
+      </a>
+
       <Image
         src={imgSrc}
         alt={title}
