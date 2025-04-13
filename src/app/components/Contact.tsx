@@ -15,6 +15,7 @@ export default function Contact() {
     message: "",
   });
   const formRef = useRef<HTMLFormElement>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = async (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,12 +45,12 @@ export default function Contact() {
       alert("Message Sent!");
       setForm({ name: "", email: "", message: "" });
     } catch (err: any) {
-      console.error("Email send error:", err.text || err.message);
+      setError("Email send error:" + err.message);
       alert("Failed to send message. Please try again later.");
     }
   };
   return (
-    <section className="max-w-xl mx-auto px-6 py-12">
+    <>
       <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
       <form
         ref={formRef}
@@ -89,8 +90,7 @@ export default function Contact() {
         >
           Send
         </button>
-        <p className="text-sm mt-2">{status}</p>
       </form>
-    </section>
+    </>
   );
 }

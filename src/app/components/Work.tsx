@@ -1,3 +1,4 @@
+import { h1 } from "framer-motion/client";
 import ProjectCard from "./ProjectCard";
 const projects = [
   {
@@ -17,16 +18,19 @@ const projects = [
 
 export default function Work() {
   return (
-    <div className="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          imgSrc={project.imgSrc}
-          title={project.title}
-          description={project.description}
-          tags={project.tags}
-        />
-      ))}
-    </div>
+    <>
+      <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            imgSrc={project.imgSrc}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+          />
+        ))}
+      </div>
+    </>
   );
 }
