@@ -12,8 +12,8 @@ export default function InterestCard({
   alt,
 }: InterestCardProps) {
   return (
-    <div className="w-full sm:w-64 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border">
-      <div className="relative w-full h-40">
+    <div className="w-full sm:w-64 h-80 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border flex flex-col">
+      <div className="relative w-full h-50">
         <Image
           src={imageSrc}
           alt={alt}
@@ -22,8 +22,10 @@ export default function InterestCard({
           className="rounded-t-xl"
         />
       </div>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+      <div className="flex-grow p-4 flex items-center justify-center">
+        <h3 className="text-lg font-semibold text-gray-800 text-center  ">
+          {title}
+        </h3>
       </div>
     </div>
   );

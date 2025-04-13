@@ -22,11 +22,11 @@ export default function Home() {
         {/* <Image></Image> */}
       </div>
 
-      <section id="work" className="p-10 max-w-screen ml-10">
+      <section id="work" className="p-10 max-w-screen mx-10">
         <Work />
       </section>
 
-      <section id="contact" className="p-10 max-w-4xl ml-10">
+      <section id="contact" className="p-10 max-w-4xl mx-10">
         <Contact />
       </section>
     </main>
