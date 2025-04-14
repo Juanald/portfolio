@@ -1,4 +1,5 @@
 // app/page.tsx
+"use client";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -6,6 +7,16 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Quote from "./components/Quote";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeInFromTop = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function Home() {
   return (
@@ -13,22 +24,49 @@ export default function Home() {
       <Navbar />
       <Header />
 
-      <section id="about">
+      <motion.section
+        id="about"
+        variants={fadeInFromTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <About />
-      </section>
+      </motion.section>
 
-      <div className="flex justify-between items-center">
+      <motion.section
+        className="flex justify-between items-center"
+        id="quote"
+        variants={fadeInFromTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Quote />
         {/* <Image></Image> */}
-      </div>
+      </motion.section>
 
-      <section id="work" className="p-10 max-w-screen mx-10">
+      <motion.section
+        id="work"
+        className="p-10 max-w-screen mx-10"
+        variants={fadeInFromTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Work />
-      </section>
+      </motion.section>
 
-      <section id="contact" className="p-10 max-w-4xl mx-10">
+      <motion.section
+        id="contact"
+        className="p-10 max-w-screen mx-10"
+        variants={fadeInFromTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Contact />
-      </section>
+      </motion.section>
     </main>
   );
 }

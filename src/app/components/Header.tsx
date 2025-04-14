@@ -5,9 +5,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const phrases = [
   "Hi, I'm Gavin!",
-  "I'm a bodybuilder.",
   "I'm a software engineer.",
-  "I'm in love with low level programming.",
+  "I'm a Lebronophile.",
 ];
 
 export default function Header() {
@@ -24,9 +23,9 @@ export default function Header() {
           />
         </h1>
       </div>
-      <p className="text-xl mb-6">
-        An aspiring software engineer passionate about building impactful
-        technology.
+      <p className="text-xl mb-6 max-w-5xl">
+        A CS and Math student with an insatiable appetite for knowledge,
+        thriving on the intersection of software development and finance.
       </p>
       <div className="flex justify-center items-center gap-4">
         <div className="flex gap-4 justify-center items-center">

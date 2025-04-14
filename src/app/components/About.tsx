@@ -5,28 +5,32 @@ const interests = [
     imageSrc: "/obama.jpg",
     title: "Software Engineering",
     alt: "Obama",
+    backContent: "Soft eng",
   },
   {
     imageSrc: "/trump.jpg",
     title: "Machine Learning",
     alt: "Trump",
+    backContent: "ML",
   },
   {
     imageSrc: "/trump.jpg",
     title: "Low Level Programming",
     alt: "Trump",
+    backContent: "Arduino",
   },
   {
     imageSrc: "/bodybuilding.jpg",
     title: "Bodybuilding",
     alt: "Arnold 1974",
+    backContent: "Who's gonna carry the boats",
   },
   {
     imageSrc: "/lebron.png",
     title: "Lebron",
     alt: "Lepookie Bear",
+    backContent: "Lebronbron",
   },
-  // Add more projects as needed
 ];
 
 export default function About() {
@@ -44,12 +48,13 @@ export default function About() {
         cybersecurity. I've built everything from a shell in C to data
         automation tools at the Public Health Agency of Canada.
       </p>
-      <div className="flex gap-8 items-center mt-8 max-w-screen">
+      <div className="flex flex-wrap justify-center items-center gap-8 mt-8 max-w-screen-xl mx-auto">
         {interests.map((interest, index) => (
           <InterestCard
             title={interest.title}
             imageSrc={interest.imageSrc}
             alt={interest.alt}
+            backContent={interest.backContent}
           />
         ))}
       </div>
