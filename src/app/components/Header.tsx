@@ -24,7 +24,7 @@ export default function Header() {
       </div>
       <p className="text-xl mb-6 max-w-5xl">
         A CS and Math student with an insatiable appetite for knowledge,
-        thriving on the intersection of software development and finance.
+        aspiring to be the best of the best.
       </p>
       <div className="flex justify-center items-center gap-4">
         <div className="flex gap-4 justify-center items-center">
