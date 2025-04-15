@@ -3,7 +3,7 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
-import Work from "./components/Work";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Quote from "./components/Quote";
 import Image from "next/image";
@@ -47,14 +47,14 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        id="work"
+        id="projects"
         className="p-10 max-w-screen mx-10"
         variants={fadeInFromTop}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <Work />
+        <Projects />
       </motion.section>
 
       <motion.section

@@ -40,6 +40,15 @@ const projects = [
     gitHubLink: "https://github.com/Juanald/Clustering-Marketing-Data",
   },
   {
+    // imgSrc: "/clustering.png",
+    title: "UAE Cars Regression",
+    description:
+      "Built a machine learning pipeline using SciKit-Learn to predict used car prices in the UAE based on features like make, model, mileage, and year. Applied extensive data preprocessing (encoding, standardization, imputation) and evaluated multiple models including random forest, linear regression, gaussian naive bayes, SVM, KNN, and neural networks.",
+    tags: ["Python", "Machine Learning", "Sci-Kit Learn", "Regression"],
+    gitHubLink:
+      "https://github.com/Juanald/Predictive-Analytics-for-UAE-Used-Car-Pricing",
+  },
+  {
     imgSrc: "/excel.png",
     title: "Excel Engine",
     description:
@@ -78,13 +87,36 @@ const projects = [
     tags: ["Python", "React", "Flask", "AI", "Terrahacks"],
     gitHubLink: "https://github.com/Juanald",
   },
+  {
+    imgSrc: "/spectre.png",
+    title: "Spectre Attack",
+    description:
+      "Launched the Spectre Attack, a groundbreaking vulnerability caused by CPU branch prefetching, in a virtual Intel x86 environment.",
+    tags: [
+      "Python",
+      "C",
+      "Side channel attack",
+      "CPU Microarchitecture",
+      "Intel x86",
+      "Branch Prediction",
+    ],
+    gitHubLink: "https://github.com/Juanald",
+  },
+  {
+    // imgSrc: "/kowalski.png",
+    title: "Buffer Overflow",
+    description:
+      "Exploited stack-based buffer overflow vulnerabilities in 32-bit and 64-bit Linux environments to achieve unauthorized root access in a virtual machine. Deployed Python scripts to automate attacks, employing NOP sleds and return address manipulation.",
+    tags: ["C", "Python", "Root Access", "Log Analysis", "Risk Management"],
+    gitHubLink: "https://github.com/Juanald",
+  },
 ];
 
 export default function Work() {
   return (
     <>
       <h2 className="text-3xl font-semibold mb-4">Projects</h2>
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

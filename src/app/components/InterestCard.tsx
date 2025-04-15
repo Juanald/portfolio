@@ -50,7 +50,8 @@ export default function InterestCard({
               src={imageSrc}
               alt={alt}
               fill
-              className="object-cover rounded-t-xl"
+              sizes="100%"
+              className="object-contain rounded-t-xl"
             />
           </div>
           <div className="flex-grow p-4 flex items-center justify-center">
@@ -74,12 +75,12 @@ export default function InterestCard({
               src={imageSrc}
               alt="Faded background"
               fill
-              className="object-cover opacity-10"
+              className="object-cover opacity-30"
             />
           </div>
           {/* Content layer on top of faded image */}
-          <div className="relative z-10 p-5 flex flex-col items-start justify-start h-full">
-            <p className="text-left text-sm leading-relaxed font-light font-sans">
+          <div className="relative z-10 p-2 flex flex-col items-start justify-start h-full">
+            <p className="text-left text-sm leading-relaxed font-medium">
               {backContent}
             </p>
           </div>

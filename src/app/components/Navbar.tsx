@@ -1,16 +1,33 @@
-// components/Navbar.tsx
+"use client";
+import Image from "next/image";
+
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-4 shadow-md sticky top-0 bg-white z-50">
-      <div className="text-xl font-bold">Gavin</div>
-      <div className="flex gap-4">
-        <a href="#about" className="hover:text-blue-500">
+    <nav className="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-50">
+      <div className="flex items-center gap-4">
+        {/* Logo or Name */}
+        <div className="text-2xl font-semibold text-gray-800 tracking-wider">
+          GD | Portfolio
+        </div>
+      </div>
+
+      <div className="flex gap-6 text-lg font-medium text-gray-800">
+        <a
+          href="#about"
+          className="hover:text-blue-600 font-semibold transition duration-300 ease-in-out"
+        >
           About
         </a>
-        <a href="#work" className="hover:text-blue-500">
-          Work
+        <a
+          href="#projects"
+          className="hover:text-blue-600 font-semibold transition duration-300 ease-in-out"
+        >
+          Projects
         </a>
-        <a href="#contact" className="hover:text-blue-500">
+        <a
+          href="#contact"
+          className="hover:text-blue-600 font-semibold transition duration-300 ease-in-out"
+        >
           Contact
         </a>
       </div>
