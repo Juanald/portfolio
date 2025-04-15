@@ -54,7 +54,7 @@ export default function About() {
         <h2 className="text-4xl font-bold text-gray-900">Who Am I?</h2>
       </div>
       <p className="text-gray-700 leading-relaxed text-lg">
-        I'm a CS and Math student at TMU who thrives at the intersection of
+        I am a CS and Math student at TMU who thrives at the intersection of
         machine learning, finance, and software engineering. I love hacking away
         at new projects, from low level embedded programming to high level
         banking applications. I love embodying the spirit of the old software
@@ -62,15 +62,16 @@ export default function About() {
       </p>
       <br />
       <p className="text-gray-700 leading-relaxed text-lg">
-        Outside software, I'm well known for my insatiable appetite and love for
-        Lebron James. I am a voracious reader, and love learning new things from
-        the realms of philosophy, to religion, mathematics, history, poetry,
-        literature and beyond. I also love bodybuilding, being a loyal adherent
-        to the sport from my teenage years.
+        Outside software, I am well known for my insatiable appetite and love
+        for Lebron James. I am a voracious reader, and love learning new things
+        from the realms of philosophy, to religion, mathematics, history,
+        poetry, literature and beyond. I also love bodybuilding, being a loyal
+        adherent to the sport from my teenage years.
       </p>
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {interests.map((interest, index) => (
           <InterestCard
+            key={index}
             title={interest.title}
             imageSrc={interest.imageSrc}
             alt={interest.alt}

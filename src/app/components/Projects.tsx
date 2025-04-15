@@ -1,6 +1,4 @@
-import { h1 } from "framer-motion/client";
 import ProjectCard from "./ProjectCard";
-import { getFlightDataPartsFromPath } from "next/dist/client/flight-data-helpers";
 const projects = [
   {
     imgSrc: "/shell.png",

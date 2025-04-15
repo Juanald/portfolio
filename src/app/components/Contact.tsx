@@ -14,8 +14,8 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [err, setErr] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const [error, setError] = useState<string | null>(null);
 
   const handleChange = async (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,8 +44,12 @@ export default function Contact() {
       console.log("Email sent: " + res.text);
       alert("Message Sent!");
       setForm({ name: "", email: "", message: "" });
-    } catch (err: any) {
-      setError("Email send error:" + err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setErr(err.message);
+      } else {
+        setErr("An unknown error has occured.");
+      }
       alert("Failed to send message. Please try again later.");
     }
   };
@@ -91,6 +95,11 @@ export default function Contact() {
           Send
         </button>
       </form>
+      {err && (
+        <p className="text-sm text-red-600 bg-red-100 border border-red-300 p-3 rounded-md">
+          {err}
+        </p>
+      )}
     </>
   );
 }
